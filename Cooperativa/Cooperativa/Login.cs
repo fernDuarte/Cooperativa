@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Cooperativa;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Cooperativa
 {
     public partial class Login : Form
     {
+        SeguridadBL _seguridad;
+
         public Login()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -33,9 +38,11 @@ namespace Cooperativa
             string contrasena;
 
             usuario = textBox1.Text;
-            contrasena = textBox2.Text;    
+            contrasena = textBox2.Text;
 
-            if (usuario == "admin" && contrasena =="123")
+           var resultado = _seguridad.Autorizar(usuario, contrasena);
+
+            if (resultado == true)
 
             {
                 this.Close();  
@@ -44,7 +51,7 @@ namespace Cooperativa
 
             else
             {
-                MessageBox.Show("usuario o contraseña no valido");  
+                MessageBox.Show("Usuario o Contraseña no valido!");  
             }
         }
     }
