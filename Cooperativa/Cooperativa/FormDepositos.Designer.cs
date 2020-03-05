@@ -29,51 +29,93 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDepositos));
             System.Windows.Forms.Label cantidadLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label ncuentaLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label tcuentaLabel;
-            this.listaDepositosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDepositos));
             this.listaDepositosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.listaDepositosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.cantidadTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.ncuentaTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.tcuentaCheckBox = new System.Windows.Forms.CheckBox();
+            this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
+            this.listaDepositosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             cantidadLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             ncuentaLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             tcuentaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.listaDepositosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaDepositosBindingNavigator)).BeginInit();
             this.listaDepositosBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaDepositosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // listaDepositosBindingSource
+            // cantidadLabel
             // 
-            this.listaDepositosBindingSource.DataSource = typeof(BL.Cooperativa.Deposito);
+            cantidadLabel.AutoSize = true;
+            cantidadLabel.Location = new System.Drawing.Point(19, 78);
+            cantidadLabel.Name = "cantidadLabel";
+            cantidadLabel.Size = new System.Drawing.Size(52, 13);
+            cantidadLabel.TabIndex = 1;
+            cantidadLabel.Text = "Cantidad:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(19, 41);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 3;
+            idLabel.Text = "Id:";
+            // 
+            // ncuentaLabel
+            // 
+            ncuentaLabel.AutoSize = true;
+            ncuentaLabel.Location = new System.Drawing.Point(147, 41);
+            ncuentaLabel.Name = "ncuentaLabel";
+            ncuentaLabel.Size = new System.Drawing.Size(51, 13);
+            ncuentaLabel.TabIndex = 5;
+            ncuentaLabel.Text = "Ncuenta:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(328, 41);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.TabIndex = 7;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // tcuentaLabel
+            // 
+            tcuentaLabel.AutoSize = true;
+            tcuentaLabel.Location = new System.Drawing.Point(19, 120);
+            tcuentaLabel.Name = "tcuentaLabel";
+            tcuentaLabel.Size = new System.Drawing.Size(50, 13);
+            tcuentaLabel.TabIndex = 9;
+            tcuentaLabel.Text = "Tcuenta:";
             // 
             // listaDepositosBindingNavigator
             // 
-            this.listaDepositosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.listaDepositosBindingNavigator.AddNewItem = null;
             this.listaDepositosBindingNavigator.BindingSource = this.listaDepositosBindingSource;
             this.listaDepositosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.listaDepositosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.listaDepositosBindingNavigator.DeleteItem = null;
             this.listaDepositosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -86,7 +128,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.listaDepositosBindingNavigatorSaveItem});
+            this.listaDepositosBindingNavigatorSaveItem,
+            this.toolStripButtonCancelar});
             this.listaDepositosBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.listaDepositosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.listaDepositosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -97,6 +140,33 @@
             this.listaDepositosBindingNavigator.Size = new System.Drawing.Size(521, 25);
             this.listaDepositosBindingNavigator.TabIndex = 0;
             this.listaDepositosBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -130,16 +200,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -162,44 +225,17 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // listaDepositosBindingNavigatorSaveItem
             // 
             this.listaDepositosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listaDepositosBindingNavigatorSaveItem.Enabled = false;
             this.listaDepositosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaDepositosBindingNavigatorSaveItem.Image")));
             this.listaDepositosBindingNavigatorSaveItem.Name = "listaDepositosBindingNavigatorSaveItem";
             this.listaDepositosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.listaDepositosBindingNavigatorSaveItem.Text = "Guardar datos";
-            // 
-            // cantidadLabel
-            // 
-            cantidadLabel.AutoSize = true;
-            cantidadLabel.Location = new System.Drawing.Point(19, 78);
-            cantidadLabel.Name = "cantidadLabel";
-            cantidadLabel.Size = new System.Drawing.Size(52, 13);
-            cantidadLabel.TabIndex = 1;
-            cantidadLabel.Text = "Cantidad:";
+            this.listaDepositosBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaDepositosBindingNavigatorSaveItem_Click);
             // 
             // cantidadTextBox
             // 
@@ -209,31 +245,14 @@
             this.cantidadTextBox.Size = new System.Drawing.Size(104, 20);
             this.cantidadTextBox.TabIndex = 2;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(19, 41);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 3;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDepositosBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(77, 38);
             this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(44, 20);
             this.idTextBox.TabIndex = 4;
-            // 
-            // ncuentaLabel
-            // 
-            ncuentaLabel.AutoSize = true;
-            ncuentaLabel.Location = new System.Drawing.Point(147, 41);
-            ncuentaLabel.Name = "ncuentaLabel";
-            ncuentaLabel.Size = new System.Drawing.Size(51, 13);
-            ncuentaLabel.TabIndex = 5;
-            ncuentaLabel.Text = "Ncuenta:";
             // 
             // ncuentaTextBox
             // 
@@ -243,15 +262,6 @@
             this.ncuentaTextBox.Size = new System.Drawing.Size(104, 20);
             this.ncuentaTextBox.TabIndex = 6;
             // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(328, 41);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
-            nombreLabel.TabIndex = 7;
-            nombreLabel.Text = "Nombre:";
-            // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDepositosBindingSource, "Nombre", true));
@@ -259,15 +269,6 @@
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(104, 20);
             this.nombreTextBox.TabIndex = 8;
-            // 
-            // tcuentaLabel
-            // 
-            tcuentaLabel.AutoSize = true;
-            tcuentaLabel.Location = new System.Drawing.Point(19, 120);
-            tcuentaLabel.Name = "tcuentaLabel";
-            tcuentaLabel.Size = new System.Drawing.Size(50, 13);
-            tcuentaLabel.TabIndex = 9;
-            tcuentaLabel.Text = "Tcuenta:";
             // 
             // tcuentaCheckBox
             // 
@@ -277,6 +278,21 @@
             this.tcuentaCheckBox.Size = new System.Drawing.Size(104, 24);
             this.tcuentaCheckBox.TabIndex = 10;
             this.tcuentaCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // toolStripButtonCancelar
+            // 
+            this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
+            this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonCancelar.Text = "Cancelar";
+            this.toolStripButtonCancelar.Visible = false;
+            this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
+            // 
+            // listaDepositosBindingSource
+            // 
+            this.listaDepositosBindingSource.DataSource = typeof(BL.Cooperativa.Deposito);
             // 
             // FormDepositos
             // 
@@ -297,10 +313,10 @@
             this.Name = "FormDepositos";
             this.Text = "Depositos";
             this.Load += new System.EventHandler(this.FormDepositos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.listaDepositosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaDepositosBindingNavigator)).EndInit();
             this.listaDepositosBindingNavigator.ResumeLayout(false);
             this.listaDepositosBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaDepositosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,5 +343,6 @@
         private System.Windows.Forms.TextBox ncuentaTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.CheckBox tcuentaCheckBox;
+        private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
     }
 }
